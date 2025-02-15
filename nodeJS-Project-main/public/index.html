@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1,
+        h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .Documentation {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .title h1 {
+            font-size: 2.5rem;
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .myApi {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .myApi div {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .myApi div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .myApi h4 {
+            font-size: 1.2rem;
+            color: #4a90e2;
+            display: flex;
+            align-items: center;
+        }
+
+        .myApi h4::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: #4a90e2;
+        }
+        .post h4::before {
+            background-color: #27ae60;
+        }
+
+        .get h4::before {
+            background-color: #2980b9;
+        }
+
+        .put h4::before {
+            background-color: #f39c12;
+        }
+
+        .patch h4::before {
+            background-color: #9b59b6;
+        }
+
+        .delete h4::before {
+            background-color: #e74c3c;
+        }
+
+        @media (max-width: 768px) {
+            .title h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="Documentation" id="Documentation">
+        <div class="home">
+            <div class="title">
+                <h1>API Documentation</h1>
+            </div>
+            <div class="myApi">
+                <div class="post">
+                    <h4>POST /users/Register</h4>
+                </div>
+                <div class="post">
+                    <h4>POST /users/Login</h4>
+                </div>
+                <div class="get">
+                    <h4>GET /users (Get all users - Admin only)</h4>
+                </div>
+                <div class="get">
+                    <h4>GET /users/:id (Get specific user - User only)</h4>
+                </div>
+                <div class="put">
+                    <h4>PUT /users/:id (Update user - Admin/User)</h4>
+                </div>
+                <div class="patch">
+                    <h4>PATCH /users/:id/status (Change isBusiness - User only)</h4>
+                </div>
+                <div class="delete">
+                    <h4>DELETE /users/:id (Delete user - Admin/User)</h4>
+                </div>
+                <div class="get">
+                    <h4>GET /cards/ (Get all cards - User only)</h4>
+                </div>
+                <div class="get">
+                    <h4>GET /my-cards/:id (Get my cards - User only)</h4>
+                </div>
+                <div class="get">
+                    <h4>GET /cards/:id (Get card - User only)</h4>
+                </div>
+                <div class="post">
+                    <h4>POST /cards/(Create New Card - Business User)</h4>
+                </div>
+                <div class="put">
+                    <h4>PUT /cards/:id (Edit Card - Business User)</h4>
+                </div>
+                <div class="patch">
+                    <h4>PATCH /cards/:id/ (Like Card - Users Only)</h4>
+                </div>
+                <div class="delete">
+                    <h4>DELETE /cards/:id (Delete Card - Admin/The user who created the card)</h4>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
